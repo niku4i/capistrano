@@ -113,6 +113,7 @@ module Capistrano
        "Do a dry run without executing actions",
        lambda { |value|
          Configuration.env.set(:sshkit_backend, SSHKit::Backend::Printer)
+         Configuration.env.set(:sshkit_backend_local, SSHKit::Backend::LocalPrinter)
        }
       ]
     end

@@ -56,7 +56,7 @@ module Capistrano
     end
 
     def run_locally(&block)
-      SSHKit::Backend::Local.new(&block).run
+      fetch(:sshkit_backend_local, SSHKit::Backend::Local).new(&block).run
     end
 
   end
